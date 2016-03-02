@@ -13,5 +13,5 @@ RUN cd julia-a2f713dea5/bin/
 USER main
 
 # Install Julia kernel
-RUN ./julia -e 'Pkg.add("IJulia")'
-RUN ./julia -e 'Pkg.add("Gadfly")' && julia -e 'Pkg.add("RDatasets")'
+RUN julia-a2f713dea5/bin/julia -e 'Pkg.add("IJulia")'
+RUN julia-a2f713dea5/bin/julia -e 'Pkg.add("Gadfly")' && julia -e 'Pkg.add("RDatasets")'
